@@ -1,0 +1,25 @@
+{
+  "name": "suite-landing-page",
+  "private": true,
+  "version": "1.0.0",
+  "description": "This is a solution to the Suite landing page challenge on Frontend Mentor",
+  "author": "Csaba Molnar (DocForLoop)",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.2",
+    "sass": "^1.85.0",
+    "vite": "^6.1.0"
+  }
+}

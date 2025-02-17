@@ -1,0 +1,93 @@
+@use 'sass:math';
+@use 'sass:meta';
+
+@function rem($px) {
+    @if math.is-unitless($px) {
+        @return math.div($px, 16) * 1rem;
+    } @else {
+        @error 'Don\'t need units';
+    }
+}
+
+@function em($px) {
+    @if math.is-unitless($px) {
+        @return math.div($px, 16) * 1em;
+    } @else {
+        @error 'Don\'t need units';
+    }
+}
+
+// Helper function to round to the specified number of decimals
+@function round-to-decimals($value, $decimals) {
+
+  @if not meta.type-of($value) == 'number' {
+    @error "Invalid value for rounding. Expected a number, got #{$value}.";
+  }
+
+  @if not meta.type-of($decimals) == 'number' or $decimals < 0 or math.floor($decimals) != $decimals {
+    @error "Invalid number of decimals. Expected a positive integer, got #{$decimals}.";
+  }
+
+  @return math.div(math.round($value * math.pow(10, $decimals)), math.pow(10, $decimals));
+}
+
+// Helper function to calculate px to rem ratio
+@function calc-rem($value) {
+  @return math.div($value, 16);
+}
+ 
+// Inspired by Christopher Kirk-Nielsen's article (https://chriskirknielsen.com/blog/modern-fluid-typography-with-clamp/), 
+// I modified and turned it into a Sass function and streamlined for wider usage.
+@function fluid($min-value, $max-value, $min-vw, $max-vw, $unit:px) {
+
+  // Check for valid units in the first four parameters
+  @if not math.is-unitless($min-value) or not math.is-unitless($max-value) or not math.is-unitless($min-vw) or not math.is-unitless($max-vw) {
+    @error "The first four parameters must be unitless numbers, because the default unit is px. Specify the unit only in the fifth parameter if you want to use rem (e.g. rem).";
+  }
+
+  // Check for the 5th unit parameter
+  @if $unit == null or $unit == '' or $unit != 'rem' and $unit != 'px' {
+    @error "You can specify only a rem/px unit as the fifth parameter, but you can omit px, as the default value is px.";
+  }
+
+  // Handle incorrect param order
+  @if ($min-value > $max-value) {
+    $temp: $min-value;
+    $min-value: $max-value;
+    $max-value: $temp;
+  }
+
+  @if ($min-vw > $max-vw) {
+    $temp: $min-vw;
+    $min-vw: $max-vw;
+    $max-vw: $temp;
+  }
+
+  // Define the number of decimals to round to
+  $decimals: 4;
+
+  // Calculate the fluid factor
+  $factor: math.div(1, ($max-vw - $min-vw)) * ($max-value - $min-value);
+
+  // Calculate the value for the middle part of the clamp
+  $calc-part1: $min-value - ($min-vw * $factor);
+  $calc-part2: 100vi * $factor;
+
+  // Round results to the specified number of decimals
+  $calc-part1: round-to-decimals($calc-part1, $decimals);
+  $calc-part2: round-to-decimals($calc-part2, $decimals);
+
+  // Handle rem parameter and decimal parts
+  @if $unit == rem {
+    $min-value: round-to-decimals(calc-rem($min-value), $decimals);
+    $max-value: round-to-decimals(calc-rem($max-value), $decimals);
+    $calc-part1: round-to-decimals(calc-rem($calc-part1), $decimals);
+  }
+
+  // Return the final clamp expression with the appropriate unit
+  @return clamp(
+    #{$min-value}#{$unit},
+    #{$calc-part1}#{$unit} + #{$calc-part2},
+    #{$max-value}#{$unit}
+  );
+}
