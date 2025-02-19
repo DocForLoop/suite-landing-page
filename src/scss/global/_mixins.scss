@@ -1,1 +1,27 @@
 @use './functions' as *;
+
+@mixin btn-primary {
+    color: var(--clr-light-secondary);
+    background-color: var(--clr-primary);
+    border-radius: rem(6);
+    font-size: var(--fs-btn-primary);
+    line-height: var(--lh-btn-primary);
+    letter-spacing: var(--ls-btn-primary);
+    padding-inline-start: 32px;
+    padding-inline-end: 31px;
+    padding-block-start: 15px;
+    padding-block-end: 14px;
+    font-weight: var(--fw-2);
+}
+
+@mixin btn-secondary {
+    color: var(--clr-primary);
+    border-radius: rem(6);
+    border: rem(1) solid var(--clr-primary);
+    font-size: var(--fs-btn-secondary);
+    line-height: var(--lh-btn-secondary);
+    letter-spacing: var(--ls-btn-secondary);
+    padding-inline: #{fluid(16, 24, 375, 768)};
+    padding-block: 12px;
+    font-weight: var(--fw-2);
+}

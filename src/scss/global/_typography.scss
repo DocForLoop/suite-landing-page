@@ -1,1 +1,62 @@
 @use './functions' as *;
+
+@font-face {
+    font-display: swap;
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/epilogue-v17-latin-regular.woff2') format('woff2');
+}
+  
+  
+@font-face {
+    font-display: swap;
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../assets/fonts/epilogue-v17-latin-700.woff2') format('woff2');
+}
+
+:root {
+    --ff-primary: "Epilogue", "Inter", "Arial", sans-serif;
+
+    --fs-btn-secondary: #{fluid(14, 16, 375, 768, rem)};
+    --fs-h1-mob-tab: #{fluid(38, 56, 375, 768, rem)};
+    --fs-h1-desktop: #{fluid(56, 72, 768, 1440, rem)};
+    --fs-body-text-main: #{fluid(16, 18, 768, 1440, rem)};
+    --fs-btn-primary: #{rem(18)};
+    --fs-body-text-reg: #{rem(16)};
+    --fs-body-text-stat: #{rem(48)};
+    --fs-h2: #{fluid(40, 48, 768, 1440, rem)};
+    --fs-body-text-quote-1: #{fluid(18, 20, 768, 1440, rem)};
+    --fs-body-text-quote-2: #{rem(18)};
+    --fs-footer: #{rem(15)};
+
+    --fw-1: 400;
+    --fw-2: 700;
+
+    --lh-h1-mob-tab: #{fluid(44, 64, 375, 768, rem)};
+    --lh-h1-desktop: #{fluid(64, 78, 768, 1440, rem)};
+    --lh-btn-primary: calc(32 / 18);
+    --lh-btn-secondary: #{fluid(24, 32, 375, 768, rem)};
+    --lh-body-text-main: #{fluid(28, 32, 768, 1440, rem)};
+    --lh-body-text-stat: calc(56 / 48);
+    --lh-body-text-reg: calc(28 / 16);
+    --lh-h2-desktop: #{fluid(48, 56, 768, 1440, rem)};
+    --lh-h2-mob-tab: calc(48 / 40);
+    --lh-body-text-quote-1: #{fluid(32, 35, 768, 1440, rem)};
+    --lh-body-text-quote-2: calc(32 / 18);
+    --lh-body-text-quote-3: calc(26 / 16);
+    --lh-footer: calc(32 / 15);
+
+    --ls-btn-secondary: #{rem(-0.14)};
+    --ls-btn-primary: #{rem(-0.18)};
+    --ls-h1-mob: #{rem(-0.53)};
+    --ls-h1-tab: #{rem(-0.78)};
+    --ls-h1-desk: #{rem(-1)};
+    --ls-body-text-reg: #{rem(0.09)};
+    --ls-big: #{rem(2.5)};
+    --ls-h2-mob: #{rem(-0.42)};
+    --ls-h2-desk: #{rem(-0.5)};
+    --ls-quote: #{rem(-0.18)};
+}

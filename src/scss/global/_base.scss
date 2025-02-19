@@ -1,0 +1,63 @@
+html {
+    font-size: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--ff-primary);
+    font-size: var(--body-text-reg);
+    line-height: var(--lh-body-text-reg);
+    letter-spacing: var(--ls-body-text-reg);
+    font-weight: var(--fw-1);
+    color: var(--clr-secondary);
+}
+
+h1 {
+    font-size: var(--fs-h1-mob-tab);
+    line-height: var(--lh-h1-mob-tab);
+    letter-spacing: var(--ls-h1-mob);
+    font-weight: var(--fw-2);
+    color: var(--clr-primary);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+    line-height: var(--lh-h2-mob);
+    letter-spacing: var(--ls-h2-mob);
+    font-weight: var(--fw-2);
+    color: var(--clr-primary);
+}
+
+p, li, figcaption {
+    text-wrap: pretty;
+    max-inline-size: 65ch;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-inline-size: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+a, a:visited, a:active {
+    text-decoration: none;
+}
