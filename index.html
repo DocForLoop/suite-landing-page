@@ -20,27 +20,26 @@
   </head>
 
   <body>
-    <div>
-      <header>
-        <a href="#">
-          <img src="/src/assets/images/logo.svg" 
+    <div class="body-wrapper">
+      <header class="header">
+        <a class="header__logo-link" href="#">
+          <img class="header__logo" src="/src/assets/images/logo.svg" 
                 alt="Home of suite" width="79" height="26">
         </a>
-        <a href="#">Request Beta Access</a>
+        <a class="header__btn" href="#">Request Beta Access</a>
       </header>
 
-      <main>
-        <section aria-labelledby="main-title">
-          <div>
-            <div>
-              <img src="/src/assets/images/pattern-curved-line-1.svg" 
+      <main class="main">
+        <section class="hero" aria-labelledby="main-title">
+          <div class="hero__container">
+            <div class="hero__content">
+              <img class="hero__decor" src="/src/assets/images/pattern-curved-line-1.svg" 
                     alt="" width="152" height="19">
-              <div>
-                <h1 id="main-title">A super solution for your business.</h1>
-                <p>Our marketing and sales automations help you scale your outreach to 
-                  get more leads for your company.
-                </p>
-                <a href="#">Request Beta Access</a>
+              <div class="hero__text">
+                <h1 class="hero__title" id="main-title"><span class="hero__title--reg">A</span> super solution <span class="hero__title--reg">for your</span> business.</h1>
+                <p class="hero__desc">Our marketing and sales automations help you scale your outreach to 
+                  get more leads for your company.</p>
+                <a class="hero__btn" href="#">Request Beta Access</a>
               </div>
             </div>
 
@@ -48,34 +47,34 @@
               <source media="(width > 48em)" 
                       srcset="/src/assets/images/image-hero-portrait.webp 1x, 
                               /src/assets/images/image-hero-portrait@2x.webp 2x">
-              <img src="/src/assets/images/image-hero-landscape.webp" 
+              <img class="hero__img" src="/src/assets/images/image-hero-landscape.webp" 
                     srcset="/src/assets/images/image-hero-landscape.webp 1x,
                             /src/assets/images/image-hero-landscape@2x.webp 2x" 
                     alt="" width="343" height="240">
             </picture>
           </div>
 
-          <section aria-label="Statistics">
-            <div>
-              <p>2K+</p>
-              <p>Companies</p>
+          <section class="hero__stats" aria-label="Statistics">
+            <div class="hero__stat">
+              <p class="hero__stat-value">2K+</p>
+              <p class="hero__stat-label">Companies</p>
             </div>
 
-            <div>
-              <p>8</p>
-              <p>Languages</p>
+            <div class="hero__stat">
+              <p class="hero__stat-value">8</p>
+              <p class="hero__stat-label">Languages</p>
             </div>
 
-            <div>
-              <p>1.2M</p>
-              <p>Leads</p>
+            <div class="hero__stat">
+              <p class="hero__stat-value">1.2M</p>
+              <p class="hero__stat-label">Leads</p>
             </div>
           </section>
         </section>
 
-        <section aria-labelledby="subhead-works">
-          <div>
-            <img src="/src/assets/images/image-jeremy-small.webp" 
+        <section class="review" aria-labelledby="subhead-works">
+          <div class="review__img-wrapper">
+            <img class="review__img" src="/src/assets/images/image-jeremy-small.webp" 
                   srcset="/src/assets/images/image-jeremy-small.webp 252w,
                           /src/assets/images/image-jeremy-small@2x.webp 504w,
                           /src/assets/images/image-jeremy-large.webp 360w,
@@ -83,41 +82,41 @@
                   sizes="(min-width: 48em) 360px, 252px" 
                   alt="" width="252" height="402" loading="lazy" decoding="async">
           </div>
-          <img src="/src/assets/images/pattern-curved-line-2.svg" 
+          <img class="review__decor" src="/src/assets/images/pattern-curved-line-2.svg" 
                 alt="" width="49" height="40" loading="lazy" decoding="async">
           
-          <div>
-            <h2 id="subhead-works">It just works.</h2>
+          <div class="review__content">
+            <h2 class="review__title" id="subhead-works"><span class="review__title--reg">It just</span> works.</h2>
 
             <blockquote>
-              <p>“I really like how it is an all-in-one solution that handle many of 
+              <p class="review__desc">“I really like how it is an all-in-one solution that handle many of 
                 the tasks that you would normally need separate tools to do the same 
                 job. This thing is a miracle worker.”
               </p>
             </blockquote>
 
-            <div>
-              <p>Jeremy Robinson</p>
-              <p>CMO, Fylo</p>
+            <div class="review__author-info">
+              <p class="review__author-name">Jeremy Robinson</p>
+              <p class="review__author-status">CMO, Fylo</p>
             </div>
           </div>
         </section>
       </main>
 
-      <footer>
-        <div>
+      <footer class="footer">
+        <div class="footer__container">
           <a href="#">
-            <img src="/src/assets/images/logo.svg" 
+            <img class="footer__logo" src="/src/assets/images/logo.svg" 
                   alt="Home of suite" width="79" height="26" loading="lazy" decoding="async">
           </a>
 
-          <small>Copyright - Suite</small>
+          <small class="footer__text">Copyright - Suite</small>
 
           <nav>
-            <ul>
+            <ul class="footer__social-list">
               <li>
-                <a href="https://www.facebook.com" aria-label="Suite on Facebook">
-                  <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                <a class="footer__social-link" href="https://www.facebook.com" aria-label="Suite on Facebook">
+                  <svg class="footer__social-icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
                     <path d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.793C0 
                     19.506.494 20 1.104 20h9.58v-7.745H8.076V9.237h2.606V7.01c0-2.583 1.578-3.99 3.883-3.99 1.104 0 2.052.082 
                     2.329.119v2.7h-1.598c-1.254 0-1.496.597-1.496 1.47v1.928h2.989l-.39 3.018h-2.6V20h5.098c.608 0 1.102-.494 
@@ -126,8 +125,8 @@
                 </a>
               </li>
               <li>
-                <a href="https://www.twitter.com" aria-label="Suite on Twitter">
-                  <svg width="20" height="17" viewBox="0 0 20 17" aria-hidden="true">
+                <a class="footer__social-link" href="https://www.twitter.com" aria-label="Suite on Twitter">
+                  <svg class="footer__social-icon" width="20" height="17" viewBox="0 0 20 17" aria-hidden="true">
                     <path d="M20 2.172a8.192 8.192 0 0 1-2.357.646 4.11 4.11 0 0 0 1.805-2.27 8.22 8.22 0 0 1-2.606.996A4.096 4.096 
                     0 0 0 13.847.248c-2.65 0-4.596 2.472-3.998 5.037A11.648 11.648 0 0 1 1.392 1a4.109 4.109 0 0 0 1.27 5.478 4.086 
                     4.086 0 0 1-1.858-.513c-.045 1.9 1.318 3.679 3.291 4.075a4.113 4.113 0 0 1-1.853.07 4.106 4.106 0 0 0 3.833 
@@ -137,8 +136,8 @@
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram.com" aria-label="Suite on Instagram">
-                  <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                <a class="footer__social-link" href="https://www.instagram.com" aria-label="Suite on Instagram">
+                  <svg class="footer__social-icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
                     <path d="M10 1.802c2.67 0 2.987.01 4.042.059 2.71.123 3.975 1.409 4.099 4.099.048 1.054.057 1.37.057 4.04 0 2.672-.01 
                     2.988-.057 4.042-.124 2.687-1.387 3.975-4.1 4.099-1.054.048-1.37.058-4.041.058-2.67 0-2.987-.01-4.04-.058-2.717-.124-3.977-1.416-4.1-4.1-.048-1.054-.058-1.37-.058-4.041 
                     0-2.67.01-2.986.058-4.04.124-2.69 1.387-3.977 4.1-4.1 1.054-.048 1.37-.058 4.04-.058ZM10 0C7.284 0 6.944.012 5.877.06 

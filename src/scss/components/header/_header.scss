@@ -1,2 +1,37 @@
 @use '@scss/global/functions' as *;
 @use '@scss/global/mixins' as m;
+
+body {
+    min-block-size: 100vh;
+}
+
+.body-wrapper {
+    inline-size: 100%;
+    max-inline-size: rem(2150);
+}
+
+.header {
+    padding-inline: fluid(16, 40, 375, 768);
+    padding-block-start: fluid(24, 40, 375, 768);
+    padding-block-end: fluid(56, 80, 375, 768);
+
+    &__logo-link {
+        flex-shrink: 0;
+    }
+
+    &__logo {
+        inline-size: rem(79);
+        block-size: rem(26);
+    }
+    
+    &__btn {
+        @include m.btn-secondary;
+        flex-shrink: 0;
+        transition: color 0.3s, background-color 0.3s;
+
+        &:hover, &:focus-visible {
+            background-color: var(--clr-primary);
+            color: var(--clr-light-secondary);
+        }
+    }
+}

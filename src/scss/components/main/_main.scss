@@ -1,2 +1,107 @@
 @use '@scss/global/functions' as *;
 @use '@scss/global/mixins' as m;
+
+.hero {
+    padding-inline: fluid(16, 40, 375, 768);
+
+    &__decor {
+        transform: translateX(fluid(155, 230, 375, 768));
+        inline-size: fluid(152, 231, 375, 768, rem);
+        block-size: fluid(19, 29, 375, 768, rem);
+    }
+
+    &__title {
+        max-inline-size: 28ch;
+    }
+
+    &__title--reg {
+        font-weight: var(--fw-1);
+    }
+
+    &__desc {
+        max-inline-size: 40ch;
+    }
+
+    &__btn {
+        @include m.btn-primary;
+        max-inline-size: rem(256);
+        min-inline-size: max-content;
+        
+        &:hover, &:focus-visible {
+            background-image: linear-gradient(165deg, var(--clr-btn-grad-start), var(--clr-btn-grad-mid), var(--clr-btn-grad-end));
+        }
+    }
+
+    &__img {
+        inline-size: 100%;
+        height: auto;
+    }
+
+    &__stat-value {
+        color: var(--clr-primary);
+        font-size: var(--fs-body-text-stat);
+        line-height: var(--lh-body-text-stat);
+        letter-spacing: 0;
+        font-weight: var(--fw-2);
+    }
+    
+    &__stat-label {
+        line-height: var(--lh-body-text-stat-lab);
+        text-transform: uppercase;
+        letter-spacing: var(--ls-big);
+    }
+}
+
+.review {
+    background-color: var(--clr-primary);
+    color: var(--clr-light-primary);
+    padding-inline: fluid(16, 58, 375, 768);
+    padding-block-end: 64px;
+    text-align: center;
+    border-radius: rem(15);
+    transform: translateY(fluid(237, 273, 375, 768));
+
+    &__img-wrapper {
+        background-image: url('../assets/images/pattern-blur.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        inline-size: 100%;
+        max-inline-size: rem(400);
+        block-size: rem(221);
+    }
+
+    &__img {
+        position: absolute;
+        inset-block-start: -181px;
+    }
+
+    &__title {
+        color: var(--clr-light-secondary);
+    }
+
+    &__title--reg {
+        font-weight: var(--fw-1);
+    }
+
+    &__desc {
+        max-inline-size: 57ch;
+        font-size: var(--fs-body-text-quote-1);
+        line-height: var(--lh-body-text-quote-1);
+    }
+
+    &__author-name {
+        text-transform: uppercase;
+        font-size: var(--fs-body-text-quote-2);
+        line-height: var(--lh-body-text-quote-2);
+        letter-spacing: var(--ls-quote);
+        font-weight: var(--fw-2);
+    }
+
+    &__author-status {
+        text-transform: uppercase;
+        line-height: var(--lh-body-text-quote-3);
+        letter-spacing: var(--ls-big);
+    }
+}

@@ -1,1 +1,12 @@
 @use '@scss/global/functions' as *;
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

@@ -1,1 +1,19 @@
 @use '@scss/global/functions' as *;
+
+.footer {
+    display: flex;
+    justify-content: center;
+    
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 33px;
+    }
+
+    &__social-list {
+        display: flex;
+        align-items: center;
+        column-gap: 28px;
+    }
+}

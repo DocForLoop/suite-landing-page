@@ -17,7 +17,7 @@
 @mixin btn-secondary {
     color: var(--clr-primary);
     border-radius: rem(6);
-    border: rem(1) solid var(--clr-primary);
+    border: rem(2) solid var(--clr-primary);
     font-size: var(--fs-btn-secondary);
     line-height: var(--lh-btn-secondary);
     letter-spacing: var(--ls-btn-secondary);

@@ -1,2 +1,32 @@
 @use '@scss/global/functions' as *;
 @use '@scss/global/mixins' as m;
+
+.footer {
+    background-color: var(--clr-light-primary);
+    /* background-color: grey; */
+    padding-block-start: 305px;
+    padding-block-end: 80px;
+
+    &__logo {
+        inline-size: rem(79);
+        block-size: rem(26);
+    }
+
+    &__text {
+        font-size: var(--fs-footer);
+        line-height: var(--lh-footer);
+    }
+
+    &__social-list {
+        list-style: none;
+    }
+
+    &__social-link {
+        color: var(--clr-primary);
+        transition: color 0.3s;
+
+        &:hover, &:focus-visible {
+            color: var(--clr-secondary);
+        }
+    }
+}

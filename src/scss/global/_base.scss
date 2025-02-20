@@ -13,7 +13,7 @@ html {
 
 body {
     font-family: var(--ff-primary);
-    font-size: var(--body-text-reg);
+    font-size: var(--fs-body-text-reg);
     line-height: var(--lh-body-text-reg);
     letter-spacing: var(--ls-body-text-reg);
     font-weight: var(--fw-1);
@@ -30,7 +30,7 @@ h1 {
 
 h2 {
     font-size: var(--fs-h2);
-    line-height: var(--lh-h2-mob);
+    line-height: var(--lh-h2-mob-tab);
     letter-spacing: var(--ls-h2-mob);
     font-weight: var(--fw-2);
     color: var(--clr-primary);
@@ -60,4 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a, a:visited, a:active {
     text-decoration: none;
+}
+a:focus-visible {
+    outline: 4px solid var(--clr-btn-grad-mid);
 }

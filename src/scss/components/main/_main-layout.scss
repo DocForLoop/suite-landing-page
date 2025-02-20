@@ -1,1 +1,62 @@
 @use '@scss/global/functions' as *;
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(56, 88, 375,768);
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 9px;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 55.68px;
+    }
+
+    &__stats {
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+    }
+    
+    &__stat {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1px;
+    }
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 38.5px;
+
+    &__img-wrapper {
+        display: grid;
+        place-items: center;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    &__author-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
