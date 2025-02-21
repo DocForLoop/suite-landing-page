@@ -3,6 +3,9 @@
 
 .hero {
     padding-inline: fluid(16, 40, 375, 768);
+    container-type: inline-size;
+    container-name: stats;
+    overflow: clip;
 
     &__decor {
         transform: translateX(fluid(155, 230, 375, 768));
@@ -57,6 +60,7 @@
     color: var(--clr-light-primary);
     padding-inline: fluid(16, 58, 375, 768);
     padding-block-end: 64px;
+    margin-inline: fluid(0, 40, 375, 768);
     text-align: center;
     border-radius: rem(15);
     transform: translateY(fluid(237, 273, 375, 768));

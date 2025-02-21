@@ -1,2 +1,66 @@
 @use '@scss/global/functions' as *;
 @use '@scss/global/mixins' as m;
+
+@container stats (width > #{em(568)}) {
+
+    .hero {
+        &__stats {
+            flex-direction: row;
+            justify-content: center;
+            column-gap: fluid(16, 120, 568, 768);
+        }
+    }
+}
+
+@media (width > em(768)) {
+    
+    .hero {
+        
+        &__container {
+            flex-direction: row;
+            position: relative;
+        }
+
+        &__title {
+            letter-spacing: var(--ls-h1-tab);
+        }
+
+        &__text {
+            row-gap: 40px;
+        }
+
+        &__img {
+            inline-size: rem(281);
+            block-size: rem(482);
+            position: absolute;
+            z-index: -1;
+            margin-left: -80px;
+        }
+
+        &__content {
+            inline-size: rem(488.6);
+            padding-block-start: 42.68px;
+            padding-block-end: 40px;
+            row-gap: 18.32px;
+        }
+    }
+
+    .review {
+        position: absolute;
+        inset-inline-start: 0;
+        inset-inline-end: 0;
+    }
+
+    .footer {
+        display: block;
+        margin-block-start: 493px;
+        padding-block-start: 536px;
+        padding-block-end: 72px;
+        padding-inline: fluid(0, 40, 375, 768);
+
+        &__container {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
