@@ -20,8 +20,8 @@ This is a solution to the [Suite landing page challenge on Frontend Mentor](http
 
 ### Links
 
-- [Solution](https://www.frontendmentor.io/)
-- [Live Site](https://)
+- [Solution](https://www.frontendmentor.io/solutions/suite-landing-page-with-flexbox-NfVLWsUf4i)
+- [Live Site](https://suite-landing-page-eight.vercel.app/)
 
 ## My process
 
