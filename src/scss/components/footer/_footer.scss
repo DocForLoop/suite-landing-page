@@ -3,7 +3,6 @@
 
 .footer {
     background-color: var(--clr-light-primary);
-    /* background-color: grey; */
     padding-block-start: 305px;
     padding-block-end: 80px;
 
@@ -28,5 +27,17 @@
         &:hover, &:focus-visible {
             color: var(--clr-secondary);
         }
+    }
+    &__fb-icon {
+        inline-size: rem(20);
+        block-size: rem(20);
+    }
+    &__twitter-icon {
+        inline-size: rem(20);
+        block-size: rem(16);
+    }
+    &__insta-icon {
+        inline-size: rem(20);
+        block-size: rem(20);
     }
 }

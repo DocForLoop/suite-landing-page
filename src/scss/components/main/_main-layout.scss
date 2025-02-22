@@ -8,13 +8,13 @@
     &__content {
         display: flex;
         flex-direction: column;
-        row-gap: 8.32px;
+        row-gap: fluid(8.32, 16.32, 375, 768);
     }
 
     &__text {
         display: flex;
         flex-direction: column;
-        row-gap: 32px;
+        row-gap: fluid(32, 40, 375, 768);
     }
 
     &__container {
