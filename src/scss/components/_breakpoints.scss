@@ -105,11 +105,19 @@
             margin-inline-start: -158px;
         }
 
+        &__desc {
+            max-inline-size: 36ch;
+        }
+
         &__stats {
             margin-block-start: 106px;
             flex-direction: column;
             justify-content: flex-start;
             row-gap: 63px;
+        }
+        
+        &__stat {
+            align-items: flex-start;
         }
     }
 
