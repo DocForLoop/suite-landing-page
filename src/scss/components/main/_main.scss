@@ -7,6 +7,9 @@
     container-name: stats;
     overflow: clip;
 
+    &__container {
+        position: relative;
+    }
     &__decor {
         transform: translateX(fluid(155, 230, 375, 768));
         inline-size: fluid(152, 231, 375, 768, rem);
@@ -108,5 +111,4 @@
         line-height: var(--lh-body-text-quote-3);
         letter-spacing: var(--ls-big);
     }
-    
 }
