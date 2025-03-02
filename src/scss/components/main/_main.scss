@@ -32,9 +32,23 @@
         @include m.btn-primary;
         max-inline-size: rem(256);
         min-inline-size: max-content;
+        position: relative;
+        overflow: clip;
+        z-index: 1;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(165deg, var(--clr-btn-grad-start), var(--clr-btn-grad-mid), var(--clr-btn-grad-end));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
         
-        &:hover, &:focus-visible {
-            background-image: linear-gradient(165deg, var(--clr-btn-grad-start), var(--clr-btn-grad-mid), var(--clr-btn-grad-end));
+        &:hover::before, 
+        &:focus-visible::before {
+            opacity: 1;
         }
     }
 
