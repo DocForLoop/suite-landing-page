@@ -28,16 +28,44 @@
             color: var(--clr-secondary);
         }
     }
+
     &__fb-icon {
         inline-size: rem(20);
         block-size: rem(20);
     }
+
     &__twitter-icon {
         inline-size: rem(20);
         block-size: rem(16);
     }
+
     &__insta-icon {
         inline-size: rem(20);
         block-size: rem(20);
+    }
+
+    &__attribution {
+        position: absolute;
+        inset-block-end: 0;
+        inset-inline: 0;
+        font-size: rem(12);
+        text-align: center;
+        color: var(--clr-primary);
+    }
+
+    &__attribution-link {
+        color: var(--clr-primary);
+        text-decoration: underline;
+        transition: color 0.3s;
+
+        &:hover,
+        &:focus-visible {
+            color: var(--clr-btn-grad-mid);
+        }
+
+        &:focus-visible {
+            outline: rem(3) solid var(--clr-btn-grad-mid);
+            outline-offset: rem(2);
+        }
     }
 }
